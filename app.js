@@ -1,6 +1,3 @@
-import * as flsFunction from "./modules/functions.js";
-
-
 window.addEventListener('DOMContentLoaded', () => {
 	const canvas = document.getElementById('canvas1');
 	const ctx = canvas.getContext('2d');
@@ -11,8 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const collisionCtx = collisionCanvas.getContext('2d');
 	collisionCanvas.width = window.innerWidth;
 	collisionCanvas.height = window.innerHeight;
-
-
 
 	let score = 0;
 	let gameOver = false;
@@ -36,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			this.directionY = Math.random() * 5 - 2.5;
 			this.markedForDeletion = false
 			this.image = new Image();
-			this.image.src = './files/raven.png';
+			this.image.src = 'raven.png';
 
 			this.frame = 0;
 			this.maxFrame = 4;
@@ -80,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	class Explosion {
 		constructor(x, y, size) {
 			this.image = new Image();
-			this.image.src = './files/boom.png';
+			this.image.src = 'boom.png';
 			this.spriteWidth = 200;
 			this.spriteHeight = 179;
 			this.size = size;
@@ -88,7 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			this.y = y;
 			this.frame = 0;
 			this.sound = new Audio();
-			this.sound.src = './files/sound.wav';
+			this.sound.src = 'sound.wav';
 			this.timeSinceLastFrame = 0;
 			this.frameInterval = 200;
 			this.markedForDeletion = false;
@@ -192,9 +187,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		else drawGameOver();
 	}
 	animate();
-
-	// for create webP dublicate
-	flsFunction.isWebp();
 });
 
 
