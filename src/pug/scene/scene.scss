@@ -1,0 +1,19 @@
+@import '../../scss/vars';
+@import '../../scss/mixins';
+
+.scene{
+	position: relative;
+	height: 100%;
+
+	&__canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__collision {
+		opacity: 0;
+	}
+}
